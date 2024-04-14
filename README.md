@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`c3`](https://developers.cloudflare.com/pages/get-started/c3).
 
+### Tutorial
+
+[Deploy a Next.js site](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-nextjs-site/#image-component)
+
 ## Getting Started
 
 First, run the development server:
