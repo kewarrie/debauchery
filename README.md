@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`c3`](https:
 
 [Deploy](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-nextjs-site) a Next.js site.
 
+[shadcn/ui](https://ui.shadcn.com/docs) library.
+
 ## Getting Started
 
 First, run the development server:
