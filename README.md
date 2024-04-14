@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`c3`](https:
 
 ### Tutorial
 
-[Deploy a Next.js site](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-nextjs-site/#image-component)
+[Deploy](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-nextjs-site) a Next.js site.
 
 ## Getting Started
 
