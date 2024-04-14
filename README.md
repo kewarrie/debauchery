@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`c3`](https://developers.cloudflare.com/pages/get-started/c3).
 
-### Tutorial
+## Tutorial
 
 [Deploy](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-nextjs-site) a Next.js site.
 
