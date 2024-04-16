@@ -1,48 +1,48 @@
 /**
- * UI for the '/' URL
+ * Root Page
+ * 
+ * Link: https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#fetching-data-on-the-server-with-fetch
  */
 
-"use client";
+/**
+ * Typescript Type: TesseraProps
+ */
+
+import type { TesseraProps } from "@/lib/utils";
 
 import * as React from "react";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
 
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Separator } from "@/components/ui/separator"
+/**
+ * React Component: Mosaic Layout
+ * 
+ * We pass the loaded data (Tessera) for display in the square
+ * layout that has been implemented on the homepage.
+ */
 
-export default function Page() {
-  const { setTheme } = useTheme()
+import Mosaic from "@/components/custom/mosaic";
 
-  return (
-    <>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="icon">
-            <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            <span className="sr-only">Toggle theme</span>
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuItem onClick={() => setTheme("light")}>
-            Light
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setTheme("dark")}>
-            Dark
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setTheme("system")}>
-            System
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-      <Separator />
-    </>
-  )
+/**
+ * Custom Function: load_data()
+ * 
+ * Load data from the API, a hosted instance of Pocketbase.
+ */
+
+async function load_data() {
+  const res: any = await fetch(`${process.env.API_URL}`);
+ 
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+ 
+  return res.json();
+}
+
+/**
+ * React Render
+ */
+
+export default async function Page() {
+  const data: { page: number, perPage: number, totalItems: number, totalPages: number, items: [TesseraProps] } = await load_data();
+
+  return <Mosaic tesserae={data.items} />;
 }
