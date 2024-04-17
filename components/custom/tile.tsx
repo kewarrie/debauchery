@@ -1,5 +1,5 @@
 /**
- * Component: Tessera
+ * Component: Tile
  */
 
 "use client";
@@ -22,7 +22,7 @@ export default function Tile({ tessera }: TileProps) {
   return (
     <div className="p-4 rounded-none border-2 border-red-600 hover:bg-red-100 dark:border-red-950 h-80 dark:hover:bg-red-950">
       <div className="block h-full w-full">
-        <p className="block h-full w-full text-center lowercase">
+        <p className="block h-full w-full text-center uppercase text-red-950 dark:text-red-100 font-mono">
           <a href="#" className="block h-full w-full content-center bg-white dark:bg-black">
             {month}
             <br />
