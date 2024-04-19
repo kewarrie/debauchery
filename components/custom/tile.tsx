@@ -32,7 +32,7 @@ export default function Tile({ tessera }: TileProps) {
             <SheetHeader>
               <SheetTitle className="text-red-950 dark:text-red-100 font-mono uppercase">{month} {year}</SheetTitle>
               <SheetDescription >
-                <p>Content</p>
+                Content
               </SheetDescription>
             </SheetHeader>
           </SheetContent>

@@ -38,11 +38,15 @@ export default function Mosaic({ tesserae }: TesseraeProps) {
         </div>
       </div>
       <Separator className="border border-red-600 dark:border-red-950" />
-      <p className="block h-full w-full text-center uppercase text-red-950 dark:text-red-100 font-mono my-4 text-sm">
+      <p className="block h-full w-full text-center uppercase text-red-950 dark:text-red-100 font-mono my-4 text-xs">
         both alcohol and smoking can cause cancer
       </p>
-      <p className="block h-full w-full text-center uppercase text-red-950 dark:text-red-100 font-mono my-4 text-xs">
+      <p className="block h-full w-full text-center uppercase text-red-950 dark:text-red-100 font-mono my-4 text-sm">
         use responsibly
+      </p>
+      <Separator className="border border-red-600 dark:border-red-950" />
+      <p className="block h-full w-full text-center uppercase text-red-950 dark:text-red-100 font-mono my-4 text-xs">
+        {process.env.NEXT_PUBLIC_BITCOIN_ADDRESS}
       </p>
       <Separator className="border border-red-600 dark:border-red-950" />
     </>

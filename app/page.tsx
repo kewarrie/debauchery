@@ -28,7 +28,7 @@ import Mosaic from "@/components/custom/mosaic";
  */
 
 async function load_data() {
-  const res: any = await fetch(`${process.env.API_URL}`);
+  const res: any = await fetch(`${process.env.API_URL}?sort=-period`);
  
   if (!res.ok) {
     throw new Error('Failed to fetch data');
