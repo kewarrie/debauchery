@@ -27,13 +27,13 @@ export default function Switch() {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="text-red-600 dark:text-red-100">
-          <DropdownMenuItem className="focus:bg-red-100 dark:focus:bg-red-950 focus:text-red-600 dark:focus:text-red-100" onClick={() => setTheme("light")}>
+          <DropdownMenuItem className="focus:bg-red-100 dark:focus:bg-red-950 focus:text-red-600 dark:focus:text-red-100 font-mono uppercase" onClick={() => setTheme("light")}>
             Light
           </DropdownMenuItem>
-          <DropdownMenuItem className="focus:bg-red-100 dark:focus:bg-red-950 focus:text-red-600 dark:focus:text-red-100" onClick={() => setTheme("dark")}>
+          <DropdownMenuItem className="focus:bg-red-100 dark:focus:bg-red-950 focus:text-red-600 dark:focus:text-red-100 font-mono uppercase" onClick={() => setTheme("dark")}>
             Dark
           </DropdownMenuItem>
-          <DropdownMenuItem className="focus:bg-red-100 dark:focus:bg-red-950 focus:text-red-600 dark:focus:text-red-100" onClick={() => setTheme("system")}>
+          <DropdownMenuItem className="focus:bg-red-100 dark:focus:bg-red-950 focus:text-red-600 dark:focus:text-red-100 font-mono uppercase" onClick={() => setTheme("system")}>
             System
           </DropdownMenuItem>
         </DropdownMenuContent>
