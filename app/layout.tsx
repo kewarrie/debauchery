@@ -33,6 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           {children}
         </ThemeProvider>
       </body>
+      <script defer src="https://umami-cyan-eta.vercel.app/script.js" data-website-id="ac92cb2f-a7d5-43e9-994c-ccced1081221"></script>
     </html>
   );
 }

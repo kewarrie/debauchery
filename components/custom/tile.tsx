@@ -38,7 +38,7 @@ export default function Tile({ tessera }: TileProps) {
     <div className="p-4 rounded-none border-2 border-red-600 hover:bg-red-100 dark:border-red-950 h-80 dark:hover:bg-red-950">
       <div className="block h-full w-full">
         <Sheet>
-          <SheetTrigger className="block h-full w-full content-center text-red-950 dark:text-red-100 bg-white dark:bg-black font-mono uppercase">
+          <SheetTrigger className="block h-full w-full content-center text-red-950 dark:text-red-100 bg-white dark:bg-black font-mono uppercase" data-umami-event={`period-${month.toLocaleLowerCase()}-${year.toLocaleLowerCase()}`}>
             {month}
             <br />
             {year}
