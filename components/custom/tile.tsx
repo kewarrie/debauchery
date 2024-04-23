@@ -138,7 +138,7 @@ export default function Tile({ tessera }: TileProps) {
                   </tbody>
                 </table>
               </div>
-              <Separator className="my-6" />
+              <Separator className="my-6 border border-white dark:border-stone-950" />
             </ScrollArea>
           </SheetContent>
         </Sheet>
