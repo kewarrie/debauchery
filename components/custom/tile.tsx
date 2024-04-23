@@ -127,7 +127,7 @@ export default function Tile({ tessera }: TileProps) {
                   </thead>
                   <thead>
                     <tr>
-                      <th colSpan={2} className="border border-x-white dark:border-x-stone-950 border-t-stone-600 border-b-stone-600 text-stone-600 font-mono uppercase py-2">difference (kes)</th>
+                      <th colSpan={2} className="border border-x-white dark:border-x-stone-950 border-t-stone-600 border-b-stone-600 text-blue-900 font-mono uppercase py-2">difference (kes)</th>
                     </tr>
                   </thead>
                   <tbody>
