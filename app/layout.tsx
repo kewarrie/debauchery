@@ -4,10 +4,13 @@
  * Link: https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required
  */
 
+import type { Metadata } from "next";
+
+import Script from 'next/script'
+import { Inter } from "next/font/google";
+
 import { ThemeProvider } from "@/components/theme-provider";
 
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -33,7 +36,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           {children}
         </ThemeProvider>
       </body>
-      <script defer src="https://umami-cyan-eta.vercel.app/script.js" data-website-id="ac92cb2f-a7d5-43e9-994c-ccced1081221"></script>
+      <Script src="https://umami-cyan-eta.vercel.app/script.js" data-website-id="ac92cb2f-a7d5-43e9-994c-ccced1081221" />
     </html>
   );
 }
