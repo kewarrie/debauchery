@@ -47,6 +47,7 @@ export default function Tile({ tessera }: TileProps) {
               <SheetDescription className="text-stone-600 font-mono lowercase">
                 statement of account
               </SheetDescription>
+              <Separator className="my-3 border border-white dark:border-stone-950" />
             </SheetHeader>
             <ScrollArea className="h-[100%] w-[100%]">
               <div className="py-4">
@@ -127,12 +128,12 @@ export default function Tile({ tessera }: TileProps) {
                   </thead>
                   <thead>
                     <tr>
-                      <th colSpan={2} className="border border-x-white dark:border-x-stone-950 border-t-stone-600 border-b-stone-600 text-blue-900 font-mono uppercase py-2">difference (kes)</th>
+                      <th colSpan={2} className="border border-x-white dark:border-x-stone-950 border-t-stone-600 border-b-stone-600 text-blue-900 font-mono uppercase py-2">carry forward (kes)</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="font-mono uppercase text-blue-900 py-2">balance</td>
+                      <td className="font-mono uppercase text-blue-900 py-2">c.f. to {dayjs(tessera.period).add(1, 'month').format('MMM YYYY')}</td>
                       <td className="font-mono uppercase text-blue-900 py-2 text-right">{(total_money_in - total_money_out).toLocaleString('en-US', options)}</td>
                     </tr>
                   </tbody>
