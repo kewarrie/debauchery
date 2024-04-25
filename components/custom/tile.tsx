@@ -29,7 +29,7 @@ export default function Tile({ tessera }: TileProps) {
   const year: string = dayjs(tessera.period).format('YYYY');
   
   // calculations
-  const total_money_in: number = tessera.income + tessera.personal_loans + tessera.bank_loans + tessera.mobile_app_loans;
+  const total_money_in: number = tessera.opening_balance + tessera.income + tessera.personal_loans + tessera.bank_loans + tessera.mobile_app_loans;
   const total_money_out: number = tessera.recurring_expenses + tessera.personal_loans_repayment + tessera.bank_loans + tessera.mobile_app_loans_repayment + tessera.debauchery + tessera.other_expenses + tessera.spotify + tessera.savings;
 
   return (
@@ -58,6 +58,10 @@ export default function Tile({ tessera }: TileProps) {
                     </tr>
                   </thead>
                   <tbody>
+                    <tr>
+                      <td className="font-mono text-stone-600 uppercase py-2">opening balance</td>
+                      <td className="font-mono text-stone-600 uppercase py-2 text-right">{tessera.opening_balance.toLocaleString('en-US', options)}</td>
+                    </tr>
                     <tr>
                       <td className="font-mono text-stone-600 uppercase py-2">income</td>
                       <td className="font-mono text-stone-600 uppercase py-2 text-right">{tessera.income.toLocaleString('en-US', options)}</td>

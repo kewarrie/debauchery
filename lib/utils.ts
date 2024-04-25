@@ -17,6 +17,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export interface TesseraProps {
   id: number;
+  opening_balance: number;
   income: number;
   personal_loans: number;
   bank_loans: number;
