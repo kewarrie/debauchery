@@ -4,6 +4,8 @@
 
 "use client";
 
+import Image from 'next/image';
+
 import type { TesseraProps } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 
@@ -19,9 +21,10 @@ export default function Mosaic({ tesserae }: TesseraeProps) {
   return (
     <>
       <Separator className="border border-red-600 dark:border-red-950" />
-      <p className="block h-full w-full text-center uppercase text-red-950 dark:text-red-100 font-mono my-4">
-      /dɪˈbɔːtʃ(ə)ri/
+      <p className="h-full w-full text-center uppercase text-red-950 dark:text-red-100 font-mono my-4 hidden lg:block">
+        /dɪˈbɔːtʃ(ə)ri/
       </p>
+      <Image src="/logo.png" width={35} height={35} className="mx-auto my-4 lg:hidden" alt="Logo" />
       <Separator className="border border-red-600 dark:border-red-950" />
       <div className="container mx-auto p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
