@@ -30,7 +30,7 @@ export default function Tile({ tessera }: TileProps) {
   
   // calculations
   const total_money_in: number = tessera.opening_balance + tessera.income + tessera.personal_loans + tessera.bank_loans + tessera.mobile_app_loans;
-  const total_money_out: number = tessera.recurring_expenses + tessera.personal_loans_repayment + tessera.bank_loans + tessera.mobile_app_loans_repayment + tessera.debauchery + tessera.other_expenses + tessera.spotify + tessera.savings;
+  const total_money_out: number = tessera.recurring_expenses + tessera.personal_loans_repayment + tessera.bank_loans_repayment + tessera.mobile_app_loans_repayment + tessera.debauchery + tessera.other_expenses + tessera.spotify + tessera.savings;
 
   return (
     <div className="p-4 rounded-none border-2 border-red-600 hover:bg-red-100 dark:border-red-950 h-80 dark:hover:bg-red-950">
@@ -93,7 +93,7 @@ export default function Tile({ tessera }: TileProps) {
                   <tbody>
                     <tr>
                       <td className="font-mono text-stone-600 uppercase py-2">recurring expenses</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">({tessera.income.toLocaleString('en-US', options)})</td>
+                      <td className="font-mono text-stone-600 uppercase py-2 text-right">({tessera.recurring_expenses.toLocaleString('en-US', options)})</td>
                     </tr>
                     <tr>
                       <td className="font-mono text-stone-600 uppercase py-2">personal loans repayment</td>
