@@ -37,7 +37,7 @@ export default function Tile({ tessera }: TileProps) {
       <div className="block h-full w-full">
         <Sheet>
           <SheetTrigger className="block h-full w-full content-center text-red-950 dark:text-red-100 bg-white dark:bg-black font-mono uppercase" data-umami-event={`period-${month.toLocaleLowerCase()}-${year.toLocaleLowerCase()}`}>
-            {month} {dayjs().diff(dayjs(tessera.created), 'day') < 1 && ('*')}
+            {month} {/* {dayjs().diff(dayjs(tessera.created), 'day') < 1 && ('*')} */}
             <br />
             {year}
           </SheetTrigger>
