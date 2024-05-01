@@ -17,10 +17,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | /dɪˈbɔːtʃ(ə)ri/',
-    default: '/dɪˈbɔːtʃ(ə)ri/',
+    template: '%s | D E B A U C H E R Y',
+    default: 'D E B A U C H E R Y',
   },
-  description: "excessive indulgence in sex, alcohol, and drugs",
+  description: "/dɪˈbɔːtʃ(ə)ri/ — Excessive indulgence in sex and drugs.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {

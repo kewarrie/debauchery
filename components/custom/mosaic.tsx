@@ -20,7 +20,7 @@ export default function Mosaic({ tesserae }: TesseraeProps) {
     <>
       <Separator className="border border-red-600 dark:border-red-950" />
       <p className="block h-full w-full text-center uppercase text-red-950 dark:text-red-100 font-mono my-4">
-        debauchery
+      /dɪˈbɔːtʃ(ə)ri/
       </p>
       <Separator className="border border-red-600 dark:border-red-950" />
       <div className="container mx-auto p-4">
