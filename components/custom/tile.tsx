@@ -10,7 +10,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import{ Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 
 const options = {
   style: 'decimal',  // Other options: 'currency', 'percent', etc.
@@ -27,6 +27,9 @@ export default function Tile({ tessera }: TileProps) {
   // string formation
   const month: string = dayjs(tessera.period).format('MMMM');
   const year: string = dayjs(tessera.period).format('YYYY');
+
+  // TEMPORARY: new post logic; update when posting recent data
+  const current_period: Dayjs = dayjs().subtract(Number(process.env.NEXT_PUBLIC_YEARS_BACK), 'year').startOf('month');
   
   // calculations
   const total_money_in: number = tessera.opening_balance + tessera.income + tessera.personal_loans + tessera.bank_loans + tessera.mobile_app_loans;
@@ -37,9 +40,19 @@ export default function Tile({ tessera }: TileProps) {
       <div className="block h-full w-full">
         <Sheet>
           <SheetTrigger className="block h-full w-full content-center text-red-950 dark:text-red-100 bg-white dark:bg-black font-mono uppercase" data-umami-event={`period-${month.toLocaleLowerCase()}-${year.toLocaleLowerCase()}`}>
-            {month} {/* {dayjs().diff(dayjs(tessera.created), 'day') < 1 && ('*')} */}
-            <br />
-            {year}
+            {dayjs(tessera.period).diff(current_period, 'day') === 0 ? (
+              <>
+                <strong>{month}</strong>
+                <br />
+                <strong>{year}</strong>
+              </>
+            ) : (
+              <>
+                {month}
+                <br />
+                {year}
+              </>
+            )}
           </SheetTrigger>
           <SheetContent className="w-[100%] sm:w-[640px] md:w-[768px] lg:w-[1024px] dark:bg-stone-950 border-red-950 sm:max-w-none md:max-w-none lg:max-w-none xl:max-w-none">
             <SheetHeader>
