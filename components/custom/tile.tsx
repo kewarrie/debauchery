@@ -40,19 +40,13 @@ export default function Tile({ tessera }: TileProps) {
       <div className="block h-full w-full">
         <Sheet>
           <SheetTrigger className="block h-full w-full content-center text-red-950 dark:text-red-100 bg-white dark:bg-black font-mono uppercase" data-umami-event={`period-${month.toLocaleLowerCase()}-${year.toLocaleLowerCase()}`}>
-            {dayjs(tessera.period).diff(current_period, 'day') === 0 ? (
-              <>
-                <strong>{month}</strong>
-                <br />
-                <strong>{year}</strong>
-              </>
-            ) : (
-              <>
-                {month}
-                <br />
-                {year}
-              </>
-            )}
+            {dayjs(tessera.period).diff(current_period, 'day') === 0 && ('**')}
+            &nbsp;
+            {month}
+            &nbsp;
+            {year}
+            &nbsp;
+            {dayjs(tessera.period).diff(current_period, 'day') === 0 && ('**')}
           </SheetTrigger>
           <SheetContent className="w-[100%] sm:w-[640px] md:w-[768px] lg:w-[1024px] dark:bg-stone-950 border-red-950 sm:max-w-none md:max-w-none lg:max-w-none xl:max-w-none">
             <SheetHeader>
