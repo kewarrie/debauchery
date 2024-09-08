@@ -12,7 +12,7 @@ import{ Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTri
 
 import dayjs, { Dayjs } from "dayjs";
 
-const options = {
+const options: any = { // Using `any` is risky business but hey, shortcuts!
   style: 'decimal',  // Other options: 'currency', 'percent', etc.
   minimumFractionDigits: 2,
   maximumFractionDigits: 2,
