@@ -57,91 +57,91 @@ export default function Tile({ tessera }: TileProps) {
                 <table className="table-auto w-full border-separate border-red-950">
                   <thead>
                     <tr>
-                      <th colSpan={2} className="border border-x-white dark:border-x-stone-950 border-t-stone-600 border-b-stone-600 text-green-900 font-mono uppercase py-2">money in (kes)</th>
+                      <th colSpan={2} className="border border-x-white dark:border-x-stone-950 border-t-stone-600 border-b-stone-600 text-green-900 font-mono capitalize py-2">money in (kes)</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="font-mono text-stone-600 uppercase py-2">opening balance</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">{tessera.opening_balance.toLocaleString('en-US', options)}</td>
+                      <td className="font-mono text-stone-600 capitalize py-2">opening balance</td>
+                      <td className="font-mono text-stone-600 capitalize py-2 text-right">{tessera.opening_balance.toLocaleString('en-US', options)}</td>
                     </tr>
                     <tr>
-                      <td className="font-mono text-stone-600 uppercase py-2">income</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">{tessera.income.toLocaleString('en-US', options)}</td>
+                      <td className="font-mono text-stone-600 capitalize py-2">income</td>
+                      <td className="font-mono text-stone-600 capitalize py-2 text-right">{tessera.income.toLocaleString('en-US', options)}</td>
                     </tr>
                     <tr>
-                      <td className="font-mono text-stone-600 uppercase py-2">personal loans</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">{tessera.personal_loans.toLocaleString('en-US', options)}</td>
+                      <td className="font-mono text-stone-600 capitalize py-2">personal loans</td>
+                      <td className="font-mono text-stone-600 capitalize py-2 text-right">{tessera.personal_loans.toLocaleString('en-US', options)}</td>
                     </tr>
                     <tr>
-                      <td className="font-mono text-stone-600 uppercase py-2">bank loans</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">{tessera.bank_loans.toLocaleString('en-US', options)}</td>
+                      <td className="font-mono text-stone-600 capitalize py-2">bank loans</td>
+                      <td className="font-mono text-stone-600 capitalize py-2 text-right">{tessera.bank_loans.toLocaleString('en-US', options)}</td>
                     </tr>
                     <tr>
-                      <td className="font-mono text-stone-600 uppercase py-2">mobile app loans</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">{tessera.mobile_app_loans.toLocaleString('en-US', options)}</td>
+                      <td className="font-mono text-stone-600 capitalize py-2">mobile app loans</td>
+                      <td className="font-mono text-stone-600 capitalize py-2 text-right">{tessera.mobile_app_loans.toLocaleString('en-US', options)}</td>
                     </tr>
                   </tbody>
                   <thead>
                     <tr>
-                      <th className="font-mono uppercase text-green-900 text-left py-2">total money in</th>
-                      <th className="font-mono uppercase text-green-900 text-right py-2">{total_money_in.toLocaleString('en-US', options)}</th>
+                      <th className="font-mono capitalize text-green-900 text-left py-2">total money in</th>
+                      <th className="font-mono capitalize text-green-900 text-right py-2">{total_money_in.toLocaleString('en-US', options)}</th>
                     </tr>
                   </thead>
                   <thead>
                     <tr>
-                      <th colSpan={2} className="border border-x-white dark:border-x-stone-950 border-t-stone-600 border-b-stone-600 text-yellow-900 font-mono uppercase py-2">money out (kes)</th>
+                      <th colSpan={2} className="border border-x-white dark:border-x-stone-950 border-t-stone-600 border-b-stone-600 text-yellow-900 font-mono capitalize py-2">money out (kes)</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="font-mono text-stone-600 uppercase py-2">recurring expenses</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">({tessera.recurring_expenses.toLocaleString('en-US', options)})</td>
+                      <td className="font-mono text-stone-600 capitalize py-2">recurring expenses</td>
+                      <td className="font-mono text-stone-600 capitalize py-2 text-right">({tessera.recurring_expenses.toLocaleString('en-US', options)})</td>
                     </tr>
                     <tr>
-                      <td className="font-mono text-stone-600 uppercase py-2">personal loans repayment</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">({tessera.personal_loans_repayment.toLocaleString('en-US', options)})</td>
+                      <td className="font-mono text-stone-600 capitalize py-2">personal loans repayment</td>
+                      <td className="font-mono text-stone-600 capitalize py-2 text-right">({tessera.personal_loans_repayment.toLocaleString('en-US', options)})</td>
                     </tr>
                     <tr>
-                      <td className="font-mono text-stone-600 uppercase py-2">bank loans repayment</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">({tessera.bank_loans_repayment.toLocaleString('en-US', options)})</td>
+                      <td className="font-mono text-stone-600 capitalize py-2">bank loans repayment</td>
+                      <td className="font-mono text-stone-600 capitalize py-2 text-right">({tessera.bank_loans_repayment.toLocaleString('en-US', options)})</td>
                     </tr>
                     <tr>
-                      <td className="font-mono text-stone-600 uppercase py-2">mobile app loans repayment</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">({tessera.mobile_app_loans_repayment.toLocaleString('en-US', options)})</td>
+                      <td className="font-mono text-stone-600 capitalize py-2">mobile app loans repayment</td>
+                      <td className="font-mono text-stone-600 capitalize py-2 text-right">({tessera.mobile_app_loans_repayment.toLocaleString('en-US', options)})</td>
                     </tr>
                     <tr>
-                      <td className="font-mono text-red-600 uppercase py-2">debauchery</td>
-                      <td className="font-mono text-red-600 uppercase py-2 text-right">({tessera.debauchery.toLocaleString('en-US', options)})</td>
+                      <td className="font-mono text-red-600 capitalize py-2">debauchery</td>
+                      <td className="font-mono text-red-600 capitalize py-2 text-right">({tessera.debauchery.toLocaleString('en-US', options)})</td>
                     </tr>
                     <tr>
-                      <td className="font-mono text-stone-600 uppercase py-2">other expenses</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">({tessera.other_expenses.toLocaleString('en-US', options)})</td>
+                      <td className="font-mono text-stone-600 capitalize py-2">other expenses</td>
+                      <td className="font-mono text-stone-600 capitalize py-2 text-right">({tessera.other_expenses.toLocaleString('en-US', options)})</td>
                     </tr>
                     <tr>
-                      <td className="font-mono text-stone-600 uppercase py-2">spotify</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">({tessera.spotify.toLocaleString('en-US', options)})</td>
+                      <td className="font-mono text-stone-600 capitalize py-2">spotify</td>
+                      <td className="font-mono text-stone-600 capitalize py-2 text-right">({tessera.spotify.toLocaleString('en-US', options)})</td>
                     </tr>
                     <tr>
-                      <td className="font-mono text-stone-600 uppercase py-2">savings</td>
-                      <td className="font-mono text-stone-600 uppercase py-2 text-right">({tessera.savings.toLocaleString('en-US', options)})</td>
+                      <td className="font-mono text-stone-600 capitalize py-2">savings</td>
+                      <td className="font-mono text-stone-600 capitalize py-2 text-right">({tessera.savings.toLocaleString('en-US', options)})</td>
                     </tr>
                   </tbody>
                   <thead>
                     <tr>
-                      <th className="font-mono uppercase text-yellow-900 text-left py-2">total money out</th>
-                      <th className="font-mono uppercase text-yellow-900 text-right py-2">{total_money_out.toLocaleString('en-US', options)}</th>
+                      <th className="font-mono capitalize text-yellow-900 text-left py-2">total money out</th>
+                      <th className="font-mono capitalize text-yellow-900 text-right py-2">{total_money_out.toLocaleString('en-US', options)}</th>
                     </tr>
                   </thead>
                   <thead>
                     <tr>
-                      <th colSpan={2} className="border border-x-white dark:border-x-stone-950 border-t-stone-600 border-b-stone-600 text-blue-900 font-mono uppercase py-2">carry forward (kes)</th>
+                      <th colSpan={2} className="border border-x-white dark:border-x-stone-950 border-t-stone-600 border-b-stone-600 text-blue-900 font-mono capitalize py-2">carry forward (kes)</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="font-mono uppercase text-blue-900 py-2">c.f. to {dayjs(tessera.period).add(1, 'month').format('MMM YYYY')}</td>
-                      <td className="font-mono uppercase text-blue-900 py-2 text-right">{(total_money_in - total_money_out).toLocaleString('en-US', options)}</td>
+                      <td className="font-mono capitalize text-blue-900 py-2">c.f. to {dayjs(tessera.period).add(1, 'month').format('MMM YYYY')}</td>
+                      <td className="font-mono capitalize text-blue-900 py-2 text-right">{(total_money_in - total_money_out).toLocaleString('en-US', options)}</td>
                     </tr>
                   </tbody>
                 </table>
