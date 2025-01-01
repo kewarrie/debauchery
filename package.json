@@ -1,6 +1,6 @@
 {
   "name": "debauchery",
-  "version": "2021.11",
+  "version": "2021.12",
   "private": true,
   "scripts": {
     "dev": "next dev",
