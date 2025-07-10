@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: '%s | D E B A U C H E R Y',
     default: 'D E B A U C H E R Y',
   },
-  description: "Debauchery® is a registered trademark of YellowSunset Enterprise Limited, a Private Limited Company.",
+  description: "/dɪˈbɔːtʃ(ə)ri/ — Excessive indulgence in sex and drugs",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
