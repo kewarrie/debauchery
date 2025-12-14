@@ -2,8 +2,6 @@
  * We really have to figure out how to update without changing code.
  */
 
-export const runtime = "edge";
-
 export default function NotFound() {
   return (
     <>

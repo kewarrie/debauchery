@@ -35,6 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# wrangler files
-.wrangler
-.dev.vars
+# open next
+.open-next
